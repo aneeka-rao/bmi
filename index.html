@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3 id="info">Enter your weight in kilograms: </h3>
+    <input id="input1">
+    <h3 id="info2">Enter you height in meters: </h3>
+    <input id="input2">
+    <button onclick="bmi()">Click Me!</button>
+    <h1 id="output"></h1>
+    <script>
+        function bmi(){
+    let w=document.getElementById('input1').value;
+    let h=document.getElementById("input2").value;
+    let body=weight/(height*height)
+    if(body<18.5){
+        document.getElementById("output").innerHTML='You are underweight. Your BMI is '
+    }
+    else if(body<=24.9&&body>=18.5){
+        document.getElementById("output").innerHTML='You are healthy. Your BMI is '
+    }
+    else if(body<=29.9&&body>=24.9){
+        document.getElementById("output").innerHTML='You are overweight. Your BMI is '
+    }
+    else if(body<=34.9&&body>=29.9){
+        document.getElementById("output").innerHTML='You are obese. Your BMI is '
+    }
+    else{
+        document.getElementById("output").innerHTML='You are extermely obese. Your BMI is '
+    }
+}
+    </script>
+</body>
+</html>
